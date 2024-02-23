@@ -12,19 +12,6 @@ for i in range(0,len(uniq) - 1):
 
 versionSpace = [list(x) for x in product(uniq[0], uniq[1], uniq[2], uniq[3], uniq[4], uniq[5])]
 versionSpace.append(['0'] * (df.shape[1]-1))
-attr = np.array(df.iloc[:,0:-1])
-target = np.array(df.iloc[:,-1])
-
-for i, x in enumerate(attr):
-    if target[i] == 'Yes':
-        to_remove = []
-        for j, y in enumerate(versionSpace):
-            for k in range(len(x)):
-                if x[k] != y[k] and y[k] != '?':
-                    to_remove.append(j)
-                    break
-        for j in sorted(to_remove, reverse=True):
-            del versionSpace[j]
 
 hypothesesList = pd.DataFrame(versionSpace)
 hypothesesList.columns = headers[:-1]
