@@ -20,13 +20,13 @@ The SLP architecture is characterized by the following components:
   
 2. **Weighted Sum:** Each input is multiplied by its corresponding weight, and the results are summed up.
 
-   \[ \text{Weighted Sum} = \sum_{i=1}^{n} ( \text{Input}_i \times \text{Weight}_i ) + \text{Bias} \]
+   $$\text{Weighted Sum} = \sum_{i=1}^{n} ( \text{Input}_i \times \text{Weight}_i ) + \text{Bias}$$
 
 3. **Activation Function:** The weighted sum is then passed through an activation function. Common activation functions include the step function, sigmoid, or hyperbolic tangent (tanh).
 
-   \[ \text{Output} = \text{Activation}(\text{Weighted Sum}) \]
+   $$\text{Output} = \text{Activation}(\text{Weighted Sum})$$
 
-4. **Output:** The output is produced by the perceptron, representing the result of the computation.
+5. **Output:** The output is produced by the perceptron, representing the result of the computation.
 
 ## Training
 
@@ -43,3 +43,4 @@ Despite its limitations, the single-layer perceptron serves as a foundation for 
 ## Execution
 
 The program for execution is `SingleLayerPerceptron.py`. Execute the code according to the requirements of the program (List of Gates csv available: AND, OR, NOR, XOR).
+
